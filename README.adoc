@@ -1,4 +1,126 @@
-.What is this?
-I'm just playing around with AsciiDoctor, you can ignore this.
+:hide-uri-scheme:
+:source-highlighter: highlightjs
+:icons: font
 
-But thanks for stopping by.
+= Testing out Asciidoctor and github pages 
+Sam Sargeant <sam@sargeant.net.nz>
+v1, 2018-02-25
+
+NOTE: This is just a test site, used to play around with https://www.asciidoctor.org[Asciidoctor]
+
+== What is this?
+
+I've used GitHub Pages before, but I never really felt I had a good workflow or means to render good documents. I wanted
+something simple, yet fully featured. Easy, yet pretty.
+
+[quote, Jean-Paul Sartre, Essays in Aesthetics]
+If you're lonely when you're alone, you're in bad company
+
+== Thoughts
+
+My first thought: _Why not Markdown?_
+
+It didn't take long to answer that question. I'm recording reasons here as I find them.
+
+WARNING: These are my own opinions. 
+
+- OMG tables are so much better.footnote:[I didn't use Markdown tables that often, but whenever I did they really annoyed me.] The usual plaintext pain, but you can also give it raw CSV to render
+- Blocks have captions, which get rendered in the right place depending on the content
+- Rendering looks lovely too. Not just tables, the whole document.
+- Syntax highlighting baked in, lots of render options from highlights.js to local libraries 
+- Admonitions look great right out of the box
+- Lists feel more powerful.
+- Quote support, perhaps not required for technical manuals, but it makes me happy
+
+Lets see if it works...
+
+
+== Testing 
+
+.As always, start with lists
+
+* Good old lists
+* don't forget *emphasis*
+** and indentation
+
+.Other toys
+
+We can do source code too:
+
+.code.py
+[source,python]
+----
+import nmap
+nm = nmap.PortScanner() 
+nm.scan('127.0.0.1', '22-443') # <1>
+----
+<1> Scan localhost, tcp port 22 to 443
+
+.foo.xml
+[source,xml]
+<document>
+	<title>Monkey Brains</title>
+	<date>February 2018</date>
+	<copyright drm="lol"/>
+</document>
+
+== Tables
+
+.Wellington Aviation 
+[%header, cols=3]
+|===
+| Frequency
+| Channel
+| Description
+
+| 119.10
+| ACX45
+| General Aviation
+
+|118.80
+|ACX33	
+|Wellington Tower
+
+|119.30
+|ACX53	
+|Wellington Approach
+
+|121.30
+|ACX133	
+|Wellington Information
+
+|121.90
+|ACX157	
+|Wellington Ground
+
+|122.30
+|ACX173	
+|Wellington Departure
+
+|118.30
+|ACX13	
+|Paraparaumu Uncontrolled
+
+|130.35
+|ARX14	
+|Air New Zealand
+
+|133.55
+|ARX118	
+|Glider operations
+
+|133.90
+|ARX132	
+|Refueling
+
+|126.90
+|ACX357	
+|ATIS
+|===
+
+[bibliography]
+== References
+
+- [[[ad]]] The Asciidoctor user manual:
+  http://asciidoctor.org/docs/user-manual/
+

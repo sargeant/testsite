@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Untitled</title>
+<meta name="author" content="Sam Sargeant">
+<title>Testing out Asciidoctor and github pages</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -424,23 +425,262 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body class="article">
 <div id="header">
+<h1>Testing out Asciidoctor and github pages</h1>
+<div class="details">
+<span id="author" class="author">Sam Sargeant</span><br>
+<span id="email" class="email"><a href="mailto:sam@sargeant.net.nz">sam@sargeant.net.nz</a></span><br>
+<span id="revnumber">version 1,</span>
+<span id="revdate">2018-02-25</span>
+</div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is just a test site, used to play around with <a href="https://www.asciidoctor.org">Asciidoctor</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_this">What is this?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<div class="title">What is this?</div>
-<p>I&#8217;m just playing around with AsciiDoctor, you can ignore this.</p>
+<p>I&#8217;ve used GitHub Pages before, but I never really felt I had a good workflow or means to render good documents. I wanted
+something simple, yet fully featured. Easy, yet pretty.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+If you&#8217;re lonely when you&#8217;re alone, you&#8217;re in bad company
+</blockquote>
+<div class="attribution">
+&#8212; Jean-Paul Sartre<br>
+<cite>Essays in Aesthetics</cite>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thoughts">Thoughts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>My first thought: <em>Why not Markdown?</em></p>
 </div>
 <div class="paragraph">
-<p>But thanks for stopping by.</p>
+<p>It didn&#8217;t take long to answer that question. I&#8217;m recording reasons here as I find them.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+These are my own opinions.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OMG tables are so much better.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup> The usual plaintext pain, but you can also give it raw CSV to render</p>
+</li>
+<li>
+<p>Blocks have captions, which get rendered in the right place depending on the content</p>
+</li>
+<li>
+<p>Rendering looks lovely too. Not just tables, the whole document.</p>
+</li>
+<li>
+<p>Syntax highlighting baked in, lots of render options from highlights.js to local libraries</p>
+</li>
+<li>
+<p>Admonitions look great right out of the box</p>
+</li>
+<li>
+<p>Lists feel more powerful.</p>
+</li>
+<li>
+<p>Quote support, perhaps not required for technical manuals, but it makes me happy</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Lets see if it works&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing">Testing</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">As always, start with lists</div>
+<ul>
+<li>
+<p>Good old lists</p>
+</li>
+<li>
+<p>don&#8217;t forget <strong>emphasis</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>and indentation</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Other toys</div>
+<p>We can do source code too:</p>
+</div>
+<div class="listingblock">
+<div class="title">code.py</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">import nmap
+nm = nmap.PortScanner()
+nm.scan('127.0.0.1', '22-443') <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Scan localhost, tcp port 22 to 443</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">foo.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;document&gt;
+	&lt;title&gt;Monkey Brains&lt;/title&gt;
+	&lt;date&gt;February 2018&lt;/date&gt;
+	&lt;copyright drm="lol"/&gt;
+&lt;/document&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tables">Tables</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Wellington Aviation</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Frequency</th>
+<th class="tableblock halign-left valign-top">Channel</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">119.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX45</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General Aviation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">118.80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX33</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wellington Tower</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">119.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX53</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wellington Approach</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">121.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX133</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wellington Information</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">121.90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX157</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wellington Ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX173</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wellington Departure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">118.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paraparaumu Uncontrolled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130.35</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARX14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Air New Zealand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">133.55</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARX118</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Glider operations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">133.90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARX132</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refueling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">126.90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACX357</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ATIS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="ad"></a>[ad] The Asciidoctor user manual:
+<a href="http://asciidoctor.org/docs/user-manual/" class="bare">asciidoctor.org/docs/user-manual/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. I didn&#8217;t use Markdown tables that often, but whenever I did they really annoyed me.
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-02-25 20:52:13 NZDT
+Version 1<br>
+Last updated 2018-02-25 22:02:27 NZDT
 </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
 </body>
 </html>
