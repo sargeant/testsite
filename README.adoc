@@ -18,7 +18,7 @@ If you're lonely when you're alone, you're in bad company
 
 == Thoughts
 
-My first thought: _Why not Markdown?_
+My first question: _Why not Markdown? Why do people use Asciidoctor?_
 
 It didn't take long to answer that question. I'm recording reasons here as I find them.
 
@@ -32,8 +32,9 @@ WARNING: These are my own opinions.
 - Lists feel more powerful.
 - Quote support, perhaps not required for technical manuals, but it makes me happy
 
-Lets see if it works...
+My second question: _What's the difference between asciidoc and asciidoctor?_
 
+It seems to be that asciidoc was the original python based project, and asciidoctor came along later. The latter project is _much_ faster and has extended the syntax.
 
 == Testing 
 
